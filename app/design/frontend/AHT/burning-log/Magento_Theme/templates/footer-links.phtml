@@ -1,0 +1,58 @@
+<div class="footer-content-category">
+    <?php
+    
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer_content_category')
+        ->toHtml();
+    ?>
+</div>
+<div class="footer-content-shop-info">
+    <?php
+    
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer_content_shop_info')
+        ->toHtml();
+    ?>
+</div>
+<div class="footer-content-policy">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer_content_policy')
+        ->toHtml();
+    ?>
+</div>
+<div id="footer-content-accordion" data-mage-init='{
+        "accordion":{
+            "active": false,
+            "collapsible": true
+        }}'>
+    
+    <div data-role="content">
+        <?php echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('footer_content_category')
+            ->toHtml();
+        ?>
+    </div>
+
+   
+    <div data-role="content">
+        <?php echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('footer_content_shop_info')
+            ->toHtml();
+        ?>
+    </div>
+
+    
+    <div data-role="content">
+        <?php echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('footer_content_policy')
+            ->toHtml();
+        ?>
+    </div>
+</div>
